@@ -81,7 +81,8 @@ module CarrierWave
             case format
             when 'mp4'
               h[:video_codec] = 'libx264'
-              h[:audio_codec] = 'libfdk_aac'
+              #h[:audio_codec] = 'libfdk_aac'
+              h[:audio_codec] = 'libvo_aacenc'
               h[:custom] = '-qscale 1 -g 30'
             when 'ogv'
               h[:video_codec] = 'libtheora'
